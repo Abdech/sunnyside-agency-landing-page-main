@@ -1,0 +1,385 @@
+:root{
+    --soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark : hsl(167, 40%, 24%); /*desaturated cyan (graphic design text)*/
+  
+    --Dark-blue: hsl(198, 62%, 26%); /* (photography text)*/
+    --Dark-moderate-cyan : hsl(168, 34%, 41%);/* (footer)*/
+
+/* ### Neutral */
+
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+
+}
+@import url(https://fonts.google.com/specimen/Barlow);
+@import url(https://fonts.google.com/specimen/Fraunces);
+/* - Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+- Weights: 600
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700, 900 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+    line-height: 160%;
+    font-size: 18px;
+}
+
+/* I use the mobile first approach */
+
+header{
+    background-image: url(images/mobile/image-header.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.header-text{
+    color: var(--White);
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.arrow{
+    width: 10%;
+    margin: auto;
+}
+.hamburger{
+    /* display: none; */
+    cursor: pointer;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2.5rem;
+    transition: all 3s ease-in-out;
+ 
+}
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    display: none;
+}
+ul a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+.high{
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    padding: 10px 2rem ; 
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+.high:hover{
+    text-decoration: none;
+    color: #fff;
+    background: #ffffff40;
+    padding: 10px 2rem ; 
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+.high-mob{
+    text-decoration: none;
+    color: #000;
+    background: #ffff00;
+    padding: 10px 2rem ; 
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+.high-mob:hover{
+    text-decoration: none;
+    color: #000;
+    background: #ffffff90;
+    padding: 10px 2rem ; 
+    border: 1px solid #000;
+}
+p{
+    color: var(--Dark-grayish-blue);
+    text-align: center;
+}
+h2{
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+    font-weight: 900;
+
+}
+.call-action{
+    display: block;
+    padding: 2rem;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-weight: 900;
+   
+    position: relative;
+    
+    /* some more css design*/
+
+}
+
+.call-action:hover{
+    text-decoration: 6px underline;
+    text-decoration-color: #ffff00;
+    text-underline-position: initial;
+}
+.red-under:hover{
+    text-decoration: 2px underline;
+    text-decoration-color: #ff0000;
+
+}
+.flex-text{
+    padding: 2.5rem;
+}
+.flex-text p{
+    margin: 2rem;
+}
+
+
+#client-testimonials{
+    text-align: center;
+    padding: 2rem;
+}
+h3{
+    color: var(--Dark-moderate-cyan);
+    word-spacing: 2px;
+    letter-spacing: 4px;
+}
+
+/* Photo collection  */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+footer{
+    background: var(--Dark-moderate-cyan);
+    text-align: center;
+    color: var(--Dark);
+    padding: 2rem;
+}
+footer > *{
+    margin: 1rem;
+    font-size: 1.5rem;
+
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.social-links{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    color: #fff;
+
+}
+.social-links img{
+    margin: 1rem;
+}
+
+
+.nav-links ul a{
+    color: var(--Dark);
+}
+.nav-links ul a:hover{
+    color: var(--White);
+}
+
+.mini-img{
+    width: 10%;
+    border-radius: 50%;
+    margin: 1rem;
+}
+.icons{
+    width: 6%;
+}
+.clients{
+    margin: 1rem;
+    padding: 2rem;
+
+}
+.post{
+    margin-top: 2rem;
+}
+
+/* Utilities */
+img{
+    width: 100%;
+}
+.logo{
+    width: 20%;
+}
+.container{
+    max-width:  1440px;
+    margin: auto;
+}
+.img{
+    position: relative;
+}
+.graphic-design-text{
+    position: absolute;
+    bottom: 10%;
+    padding: 3rem;
+}
+.graphic-design-text p{
+    padding: 0 3rem;
+}
+.img .photography{
+    color: var(--Dark-blue);
+}
+.img .graphic{
+    color: var(--Dark-moderate-cyan);
+}
+.f-logo{
+    color: var(--Dark);
+    width: 30%;
+    /* filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%); */
+    /* color: red; */
+}
+.image-gallary{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* I would increase the size of the icons later */
+.desktop{
+    display: none;
+}
+.hamburger-img{
+    position: relative;
+}
+.mob-view{
+    position: absolute;
+    right: 2.5rem;
+    left: 2rem;
+    top: 7rem;
+    background: #fff;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    height: 60vh;
+    /* transform: translateX(30px); */
+    transition: all 10s ease ;
+    /* display: none; */
+
+}
+.mob-view::before{
+    content: "";
+    position: absolute;
+    top: -1.6rem;
+    right: 0;
+    color: #fff;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #fff;
+    border-left: 100px solid transparent;
+    
+    
+
+}
+.mob-view a{
+    color: #000;
+    margin: 2rem;
+}
+.simple{
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #fff;
+    border-left: 100px solid transparent;
+}
+
+@media (min-width: 1440px) {
+    
+    .flex-text{
+        border: 1px solid #fff;
+    }
+}
+@media (min-width: 900px) {
+
+    .desktop{
+        display: block;
+    }
+    .mobile{
+        display: none;
+    }
+
+    header{
+        background-image: url(images/desktop/image-header.jpg);
+    }
+    .header-text{
+        font-size: 6rem;
+    }
+    .arrow{
+        width: 4%;
+    }
+    .hamburger{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+    }
+    .images-texts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .flex-two{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .flex-text{
+        /* padding: 2.5rem; */
+        display: grid;
+
+        place-content: center;
+
+        
+    }
+    .flex-text p{
+        margin: 0 2rem;
+        text-align: start;
+    }
+    .flex-text h2{
+        font-size: 2rem;
+        padding:0 2rem;
+        text-align: start;
+        font-weight: 900;
+    
+    }
+    .call-action{
+        text-align: start;
+
+    }
+    .graphic-design-text p{
+        margin: 0;
+    }
+    .graphic-design-text h2{
+        margin: 0;
+        padding: .5rem;
+    }
+
+    .grid-3{
+       display: grid; 
+       grid-template-columns: 1fr 1fr 1fr;
+    }
+    .mini-img{
+        width: 25%;
+    }
+    .image-gallary{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+}
